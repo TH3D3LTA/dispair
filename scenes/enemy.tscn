@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cku2toasi7wok"]
+
+[ext_resource type="AudioStream" uid="uid://bwqbbi782cbkg" path="res://audio/oof-button.mp3" id="1_7p1mj"]
+[ext_resource type="AudioStream" uid="uid://dp4gt51u61vye" path="res://audio/smth-special-7.mp3" id="2_md0e3"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8tegq"]
+radius = 0.4
+height = 1.8
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_drcv8"]
+radius = 0.4
+height = 1.8
+
+[node name="Enemy" type="CharacterBody3D" unique_id=1155942476]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1985726716]
+shape = SubResource("CapsuleShape3D_8tegq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1376361430]
+mesh = SubResource("CapsuleMesh_drcv8")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=2013998180]
+stream = ExtResource("1_7p1mj")
+
+[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="." unique_id=1983353456]
+stream = ExtResource("2_md0e3")

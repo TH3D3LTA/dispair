@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://56as8axt8wxu"]
 
 [ext_resource type="PackedScene" uid="uid://dmpufk2ug5r3l" path="res://scenes/player.tscn" id="1_nnsk1"]
+[ext_resource type="PackedScene" uid="uid://cku2toasi7wok" path="res://scenes/enemy.tscn" id="2_4wyf3"]
+[ext_resource type="Script" uid="uid://dqdj8hiog478i" path="res://scripts/enemy.gd" id="3_k0juu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nnsk1"]
 sky_top_color = Color(1, 0, 0, 1)
@@ -66,3 +68,7 @@ mesh = SubResource("BoxMesh_ws71c")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Box" unique_id=895098211]
 shape = SubResource("BoxShape3D_drcv8")
+
+[node name="Enemy" parent="." unique_id=1155942476 instance=ExtResource("2_4wyf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.022518, 2.0914464, 13.969591)
+script = ExtResource("3_k0juu")

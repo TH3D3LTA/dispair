@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://1q7ggwu1mecl"]
+
+[ext_resource type="Script" uid="uid://daxj22h66u686" path="res://scripts/pistol.gd" id="1_buff3"]
+[ext_resource type="PackedScene" uid="uid://cxihgggim70sy" path="res://models/Pistoleteur.fbx" id="1_igbvm"]
+
+[node name="Pistol" type="Node3D" unique_id=1991516124]
+script = ExtResource("1_buff3")
+
+[node name="Pistoleteur" parent="." unique_id=653363128 instance=ExtResource("1_igbvm")]
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=378502386]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.026516825, -0.117904484)
+
+[node name="RayCast3D" type="RayCast3D" parent="Marker3D" unique_id=735845920]
+target_position = Vector3(0, 0, -100)

@@ -1,12 +1,14 @@
 extends CharacterBody3D
 
 
-const SPEED = 5.0
-const JUMP_VELOCITY = 4.5
+const SPEED = 8.0
+const JUMP_VELOCITY = 6
 
+
+var jump_count
 
 var sensivity = 0.003
-@onready var camera = $Camera3D
+@onready var camera = $Head/Camera3D
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -28,6 +30,10 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("player_jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		jump_count = 1
+	elif Input.is_action_just_pressed("player_jump") and jump_count > 0:
+		velocity.y = JUMP_VELOCITY
+		jump_count -= 1
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
