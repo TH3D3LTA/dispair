@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 
 var health = 100
-@onready var body = $MeshInstance3d
+@onready var body = $MeshInstance3D
 @onready var hit = $AudioStreamPlayer3D
 @onready var death = $AudioStreamPlayer3D2
 

@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://d33rsdx3fvjeo" path="res://scripts/player.gd" id="1_3vyb7"]
 [ext_resource type="PackedScene" uid="uid://1q7ggwu1mecl" path="res://scenes/pistol.tscn" id="2_g2els"]
+[ext_resource type="PackedScene" uid="uid://c8g0qj08ydcq0" path="res://scenes/pause_gui.tscn" id="3_qhqgy"]
+[ext_resource type="PackedScene" uid="uid://yfkcg67xrvkw" path="res://scenes/player_gui.tscn" id="4_dqkch"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ws71c"]
 radius = 0.4
@@ -28,3 +30,8 @@ fov = 67.0
 
 [node name="Pistol" parent="Head/Camera3D" unique_id=1991516124 instance=ExtResource("2_g2els")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.46265328, -0.25387818, -0.60888934)
+
+[node name="PauseGui" parent="." unique_id=1354030691 instance=ExtResource("3_qhqgy")]
+visible = false
+
+[node name="PlayerGui" parent="." unique_id=1201119078 instance=ExtResource("4_dqkch")]
